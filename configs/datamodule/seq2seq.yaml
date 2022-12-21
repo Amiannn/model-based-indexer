@@ -1,0 +1,10 @@
+_target_: src.datamodules.seq2seq_datamodule.Seq2SeqDataModule
+train_datapath: '/share/nas165/amian/experiments/nlp/dsi_project/data/10k/nq-train.tsv'
+val_datapath  : '/share/nas165/amian/experiments/nlp/dsi_project/data/10k/nq-dev.tsv'
+test_datapath : '/share/nas165/amian/experiments/nlp/dsi_project/data/10k/nq-dev.tsv'
+cfg_name      : 't5-base'
+batch_size    : 32
+max_seq_length: 100
+max_length    : 100
+num_workers   : 10
+pin_memory    : False

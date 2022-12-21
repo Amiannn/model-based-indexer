@@ -1,0 +1,10 @@
+_target_: src.datamodules.contrastive_datamodule.ContrastiveDataModule
+train_datapath: '/share/nas165/amian/experiments/nlp/dsi_project/data/10k/nq-train.json'
+val_datapath  : '/share/nas165/amian/experiments/nlp/dsi_project/data/10k/nq-dev.json'
+test_datapath : '/share/nas165/amian/experiments/nlp/dsi_project/data/10k/nq-dev.json'
+cfg_name      : 't5-base'
+batch_size    : 32
+max_seq_length: 100
+max_length    : 30
+num_workers   : 10
+pin_memory    : False
