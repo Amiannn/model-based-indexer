@@ -3,11 +3,9 @@ import os
 import json
 import pickle
 import numpy as np
-import matplotlib.pyplot as plt
 
 from tqdm import tqdm
 from sklearn.cluster import KMeans
-from sklearn import manifold
 
 from sentence_transformers import SentenceTransformer
 

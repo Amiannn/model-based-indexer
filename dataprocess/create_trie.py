@@ -37,7 +37,6 @@ if __name__ == '__main__':
         pickle.dump(trie_dict, f)
 
 # USAGE:
-# python3 utils/dsi/create_trie.py \
-# --input_path ./data/10k/sid/docs_w32_10k_st5_pid2sid.tsv \
-# --output_dir data/10k/trie \
+# python3 dataprocess/create_trie.py \
+# --input_path ./data/10k/nq-train.json \
 # --model_type "t5-base"

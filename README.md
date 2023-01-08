@@ -18,13 +18,20 @@ pip3 install -r requirements.txt
 - [Natural Question](https://huggingface.co/datasets/natural_questions)
 - 可以使用`python3 dataprocess/create_nq_train.py --document_length 10000`來產生訓練資料集。
 
+## Create Trie (Constrained Beam Search)
+```bash
+python3 dataprocess/create_trie.py \
+    --input_path ./data/10k/nq-train.json \
+    --model_type "t5-base"
+```
+
 ## Model Training
 ```bash
-# train dsi model
-./scripts/dsi/train.sh
-
 # train dpr model
 ./scripts/dpr/train.sh
+
+# train dsi model
+./scripts/dsi/train.sh
 
 # train drscl model
 ./scripts/drscl/train.sh
@@ -32,13 +39,13 @@ pip3 install -r requirements.txt
 
 ## Model Inference
 ```bash
-# predict dsi model
-./scripts/dsi/predict.sh
-
 # predict dpr model (需要先產生documents的embedding，用embedding.sh)
 ./scripts/dpr/predict.sh
 
-# predict drscl model
+# predict dsi model (需先產生Constrained Beam Search要使用的Trie，並修改TRIE_PATH)
+./scripts/dsi/predict.sh
+
+# predict drscl model (需先產生Constrained Beam Search要使用的Trie，並修改TRIE_PATH)
 ./scripts/drscl/predict.sh
 ```
 

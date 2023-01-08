@@ -85,7 +85,13 @@ if __name__ == '__main__':
     parser.add_argument("--output_dir"     , type=str, default='./data', help="Dataset path.")
     args = parser.parse_args()
 
-    datas = datasets.load_dataset('natural_questions', cache_dir='cache')['train']
+    datas = datasets.load_dataset(
+        'natural_questions', 
+        cache_dir='cache', 
+        beam_runner='DirectRunner',
+        ignore_verifications=True
+    )['train']
+
     idxs  = list(range(len(datas)))
     random.shuffle(idxs)
 
@@ -140,7 +146,7 @@ if __name__ == '__main__':
     # create data folder
     output_dataset_dir = os.path.join(args.output_dir, 'nq_{}'.format(human_format(args.document_length)))
     if not os.path.exists(output_dataset_dir):
-        os.makedirs(output_dataset_dir)
+        os.makedirs(output_dataset_dir, exist_ok=True)
 
     output_path = os.path.join(output_dataset_dir, 'nq-train.json')
     write_json(train_datas, output_path)
