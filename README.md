@@ -32,13 +32,13 @@ pip3 install -r requirements.txt
 
 ## Model Inference
 ```bash
-# train dsi model
+# predict dsi model
 ./scripts/dsi/predict.sh
 
-# train dpr model (需要先產生documents的embedding，用embedding.sh)
+# predict dpr model (需要先產生documents的embedding，用embedding.sh)
 ./scripts/dpr/predict.sh
 
-# train drscl model
+# predict drscl model
 ./scripts/drscl/predict.sh
 ```
 
