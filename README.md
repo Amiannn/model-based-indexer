@@ -54,3 +54,4 @@ python3 dataprocess/create_trie.py \
 - [Transformer Memory as a Differentiable Search Index](https://openreview.net/pdf?id=Vu-B0clPfq)
 - [Building an Enhanced Autoregressive Document Retriever
 Leveraging Supervised Contrastive Learning](https://aclanthology.org/2022.rocling-1.34/)
+- [AVATAR: Robust Voice Search Engine Leveraging Autoregressive Document Retrieval and Contrastive Learning](https://arxiv.org/abs/2309.01395)
